@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/touch_target"
+    android:layout_height="@dimen/touch_target"
+    android:layout_marginEnd="@dimen/spacing_xs"
+    android:background="?attr/selectableItemBackgroundBorderless">
+
+    <ImageView
+        android:id="@+id/iv_option"
+        android:layout_width="@dimen/picker_item"
+        android:layout_height="@dimen/picker_item"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_circle"
+        android:importantForAccessibility="no"
+        android:padding="10dp" />
+</FrameLayout>

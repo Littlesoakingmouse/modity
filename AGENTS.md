@@ -59,6 +59,9 @@ item_task_group.xml
 
 Activities should contain UI coordination logic.
 
+Data base use:
+  use Room with SQLite
+
 RecyclerView should use:
 - Adapter
 - ViewHolder

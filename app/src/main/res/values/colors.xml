@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="brand_primary">#6750A4</color>
-    <color name="brand_on_primary">#FFFFFFFF</color>
-    <color name="brand_primary_container">#EADDFF</color>
-    <color name="brand_on_primary_container">#21005D</color>
-    <color name="app_surface">#FFFFFBFE</color>
-    <color name="app_on_surface">#FF1C1B1F</color>
-    <color name="app_surface_variant">#FFE7E0EC</color>
-    <color name="app_on_surface_variant">#FF49454F</color>
-    <color name="app_outline">#FF79747E</color>
+    <color name="app_background">#FAFAFA</color>
+    <color name="app_surface">#FFFFFF</color>
+    <color name="app_surface_variant">#F4F4F5</color>
+    <color name="app_on_surface">#18181B</color>
+    <color name="app_on_surface_variant">#71717A</color>
+    <color name="app_outline">#E4E4E7</color>
+    <color name="app_outline_variant">#EFEFF1</color>
+
+    <color name="brand_primary">#18181B</color>
+    <color name="brand_on_primary">#FFFFFF</color>
+    <color name="brand_primary_container">#F4F4F5</color>
+    <color name="brand_on_primary_container">#18181B</color>
+
+    <color name="status_completed">#16A34A</color>
+    <color name="status_missed">#DC2626</color>
+    <color name="status_skipped">#A1A1AA</color>
+    <color name="status_pending">#D4D4D8</color>
+
+    <color name="task_indigo">#4F46E5</color>
+    <color name="task_sky">#0EA5E9</color>
+    <color name="task_emerald">#10B981</color>
+    <color name="task_amber">#F59E0B</color>
+    <color name="task_red">#EF4444</color>
+    <color name="task_pink">#EC4899</color>
+    <color name="task_violet">#8B5CF6</color>
+    <color name="task_slate">#64748B</color>
 </resources>

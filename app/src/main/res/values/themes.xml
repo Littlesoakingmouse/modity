@@ -4,15 +4,41 @@
         <item name="colorOnPrimary">@color/brand_on_primary</item>
         <item name="colorPrimaryContainer">@color/brand_primary_container</item>
         <item name="colorOnPrimaryContainer">@color/brand_on_primary_container</item>
+        <item name="colorSecondary">@color/brand_primary</item>
+        <item name="colorOnSecondary">@color/brand_on_primary</item>
+        <item name="colorSecondaryContainer">@color/app_surface_variant</item>
+        <item name="colorOnSecondaryContainer">@color/app_on_surface</item>
+        <item name="colorTertiary">@color/brand_primary</item>
+        <item name="colorError">@color/status_missed</item>
+        <item name="android:colorBackground">@color/app_background</item>
         <item name="colorSurface">@color/app_surface</item>
         <item name="colorOnSurface">@color/app_on_surface</item>
         <item name="colorSurfaceVariant">@color/app_surface_variant</item>
         <item name="colorOnSurfaceVariant">@color/app_on_surface_variant</item>
+        <item name="colorSurfaceContainerLowest">@color/app_surface</item>
+        <item name="colorSurfaceContainerLow">@color/app_surface</item>
+        <item name="colorSurfaceContainer">@color/app_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/app_surface</item>
+        <item name="colorSurfaceContainerHighest">@color/app_surface_variant</item>
         <item name="colorOutline">@color/app_outline</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/app_surface</item>
-        <item name="android:statusBarColor">@color/app_surface</item>
+        <item name="colorOutlineVariant">@color/app_outline_variant</item>
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="materialCardViewStyle">@style/Widget.Modity.Card</item>
+        <item name="materialButtonStyle">@style/Widget.Modity.Button</item>
+        <item name="textInputStyle">@style/Widget.Modity.TextInput</item>
+        <item name="toolbarStyle">@style/Widget.Modity.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Widget.Modity.BottomNav</item>
+        <item name="chipStyle">@style/Widget.Modity.Chip</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Modity.Dialog</item>
     </style>
 
-    <style name="Theme.Modity" parent="Base.Theme.Modity" />
+    <style name="Theme.Modity" parent="Base.Theme.Modity">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <style name="ThemeOverlay.Modity.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurfaceContainerHigh">@color/app_surface</item>
+        <item name="colorPrimary">@color/brand_primary</item>
+    </style>
 </resources>

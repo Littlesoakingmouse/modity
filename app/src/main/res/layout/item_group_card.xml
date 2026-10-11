@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/group_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:paddingHorizontal="@dimen/spacing_md"
+            android:paddingTop="@dimen/spacing_md"
+            android:paddingBottom="@dimen/spacing_sm">
+
+            <ImageView
+                android:id="@+id/iv_group_icon"
+                android:layout_width="@dimen/icon_badge"
+                android:layout_height="@dimen/icon_badge"
+                android:background="@drawable/bg_rounded"
+                android:importantForAccessibility="no"
+                android:padding="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_task_sun" />
+
+            <TextView
+                android:id="@+id/tv_group_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Modity.Title"
+                app:layout_constraintBottom_toTopOf="@id/progress_group"
+                app:layout_constraintEnd_toStartOf="@id/tv_group_count"
+                app:layout_constraintStart_toEndOf="@id/iv_group_icon"
+                app:layout_constraintTop_toTopOf="@id/iv_group_icon"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Morning routine" />
+
+            <TextView
+                android:id="@+id/tv_group_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_sm"
+                android:textAppearance="@style/TextAppearance.Modity.Caption"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_group_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="2/5" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progress_group"
+                style="@style/Widget.Modity.Progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:max="100"
+                app:layout_constraintBottom_toBottomOf="@id/iv_group_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_group_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_group_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/task_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/spacing_xs" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

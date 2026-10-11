@@ -1,7 +1,16 @@
 package com.example.modity.model
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "task_groups")
 data class TaskGroup(
-    val id: Long = 0,
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val name: String,
-    val tasks: List<Task> = emptyList(),
+    val description: String = "",
+    val color: Int,
+    val icon: String = TaskIcon.STAR.name,
+    val position: Int = 0,
+    @ColumnInfo(name = "created_at") val createdAt: Long = System.currentTimeMillis(),
 )

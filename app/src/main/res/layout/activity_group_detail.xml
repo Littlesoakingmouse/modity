@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.group.GroupDetailActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_task_detail"
+        app:navigationContentDescription="@string/navigate_back"
+        app:navigationIcon="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/iv_group_icon"
+        android:layout_width="@dimen/icon_badge_lg"
+        android:layout_height="@dimen/icon_badge_lg"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:background="@drawable/bg_rounded"
+        android:importantForAccessibility="no"
+        android:padding="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:src="@drawable/ic_task_sun" />
+
+    <TextView
+        android:id="@+id/tv_group_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_md"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:textAppearance="@style/TextAppearance.Modity.Headline"
+        app:layout_constraintBottom_toTopOf="@id/tv_group_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_group_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_group_icon"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Morning routine" />
+
+    <TextView
+        android:id="@+id/tv_group_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Modity.Caption"
+        app:layout_constraintBottom_toBottomOf="@id/iv_group_icon"
+        app:layout_constraintEnd_toEndOf="@id/tv_group_name"
+        app:layout_constraintStart_toStartOf="@id/tv_group_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_group_name"
+        tools:text="Start the day right" />
+
+    <TextView
+        android:id="@+id/tv_group_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:textAppearance="@style/TextAppearance.Modity.Caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_group_icon"
+        tools:text="Today · 2 of 5 done · 40%" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_group"
+        style="@style/Widget.Modity.Progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_sm"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="@id/tv_group_progress"
+        app:layout_constraintStart_toStartOf="@id/tv_group_progress"
+        app:layout_constraintTop_toBottomOf="@id/tv_group_progress" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tasks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_sm"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/spacing_sm"
+        android:paddingBottom="@dimen/list_bottom_padding"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_group" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/screen_padding"
+        android:contentDescription="@string/add_task"
+        app:backgroundTint="?attr/colorPrimary"
+        app:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Modity.Fab"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="?attr/colorOnPrimary" />
+</androidx.constraintlayout.widget.ConstraintLayout>
